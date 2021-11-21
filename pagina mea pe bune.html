@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<title>Evaluare</title> 
+<link rel="stylesheet" href="evaluare.css">
+</head>
+<body>
+
+<h1>Robu Victor-Dimitrie </h1>
+<h2 id="contact" >robu.io.victor@student.utcluj.ro</h2>
+<div id="div1">
+<p id="p2">Structura retelei personale si accesul la internet</p>
+<img id="imagine" src="diagrama.png" width="550" height="280" >
+<p id="p2">Caracteristicile conexiunii la retea</p>
+<li id="p3">Adresa MAC:74-4C-A1-D6-A8-7B</li>
+<li id="p3">Adresa IP: 193.226.6.237</li>
+<li id="p3">Debit de download: 82.79</li>
+<li id="p3">Debit de upload: 83.75</li>
+<br>
+</div>
+<div id="color">
+<p id="div3"><u><b> Utilizarea resurselor </b></u></p>
+<div class="container">
+
+
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+      <img src="cpu.png" style="width:50%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+      <img src="memorie.png" style="width:50%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+      <img src="disk.png" style="width:50%">
+  </div>
+
+   <div class="mySlides">
+    <div class="numbertext">4/ 4</div>
+      <img src="porturi.png" style="width:50%">
+  </div>
+
+  
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="cpu.png" style="width:100%" onclick="currentSlide(1)" alt="Utilizarea resurselor ">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="memorie.png" style="width:100%" onclick="currentSlide(2)" alt="Utilizarea resurselor ">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="disk.png" style="width:100%" onclick="currentSlide(3)" alt="Utilizarea resurselor ">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="porturi.png" style="width:100%" onclick="currentSlide(4)" alt="Utilizarea resurselor ">
+    </div>
+    
+  </div>
+</div>
+<br><br><br><br><br>
+</div>
+<br>
+
+<p id="div3">Specificatii tehnice ale statiei principale de lucru</p> <br>
+<table>
+  <tr>
+    <th>Denumire componenta</th>
+    <th>Producator</th>
+    <th>Parametri</th>
+  </tr>
+  <tr>
+    <td>Ryzen 5 5600h</td>
+    <td>AMD</td>
+    <td>8M Cache, up to 4.20 GHz</td>
+  </tr>
+  <tr>
+    <td>Galaxy A51 5G</td>
+    <td>SAMSUNG</td>
+    <td>Cpacitate 124GB, Memorie RAM: 6GB, Octa-core (2x2.2 GHz Cortex-A77 & 6x1.8 GHz Cortex A55)</td>
+  </tr>
+  <tr>
+  <td>Router 4A AC1200</td>
+    <td>XIAOMI MI</td>
+    <td>Dual-Band 300 + 867 Mbps</td>
+	</tr>
+</table>
+<br>
+
+
+</body>
+</html>
